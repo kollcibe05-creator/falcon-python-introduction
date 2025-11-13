@@ -55,7 +55,7 @@ def square_numbers(numbers):
     squared = [x**2 for x in numbers]
     print(f"Squared numbers: {squared}")
 
-square_numbers([1, 2, 3, 4, 5])
+# square_numbers([1, 2, 3, 4, 5])
 
 #generator expression
 def generate_squares(n):
@@ -63,4 +63,17 @@ def generate_squares(n):
     for square in squares:
         print(f"Square: {square}")
         
-generate_squares(5)
+# generate_squares(5)
+
+# decorators
+def decorator_function(original_function):
+    def wrapper_function(*args, **kwargs):
+        print(f"Wrapper executed before {original_function.__name__}")
+        return original_function(*args, **kwargs)
+    return wrapper_function
+
+@decorator_function
+def display_info(name, age):
+    print(f"display_info ran with arguments ({name}, {age})")
+    
+display_info("Alice", 30)
