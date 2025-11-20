@@ -46,7 +46,7 @@ class Lecturer:
     pass
 
 alice = Student("Alice", "SD", "August 2025", 100)
-# bob = Student("Bob")
+bob = Student("Bob")
 
 alice.greet()
 # bob.greet()
